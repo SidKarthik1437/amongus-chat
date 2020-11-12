@@ -10,7 +10,7 @@ padding:0;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
-    width: 80%;
+    width: 600px;
     height: 35px;
     box-shadow: 4px 4px 1px rgba(41, 41, 41, 0.705);
     align-items: center;
@@ -21,7 +21,8 @@ padding:0;
     width: 50px;
     height: 50px;
     object-fit: contain;
-    padding-bottom: px;
+    margin-bottom: 4px;
+    
 }
 
 .message__info
@@ -36,28 +37,14 @@ padding:0;
     padding-left: 10px;
 }
 
-.text_box
+.message__timestamp
 {
-    margin-top: 340px;
-    
+    color: grey;
+    font-weight: 300;
+    font-size: 13px;
 }
-
-.text_box>form>input
+.display
 {
-    padding: 10px;
-    width: 90%;
-    height: 20px;
-    border-radius: 5px;
-}
-.text_box>form>button
-{
-    padding: 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-
-}
-.sendbutton
-{
-    padding:0;
+    height:100px;
+    overflow-y:scroll;
 }

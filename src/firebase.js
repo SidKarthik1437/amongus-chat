@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+
 const firebaseConfig = {
     apiKey: "AIzaSyBVDwVgkbV9_JtGJ_jhKux_A54kjJWvMFo",
     authDomain: "amongus-chat.firebaseapp.com",
@@ -13,7 +14,7 @@ const firebaseConfig = {
   const firebaseApp = firebase.initializeApp(firebaseConfig);
 
   const db = firebaseApp.firestore();
-  const auth = firebaseApp.auth();
+  const auth = firebase.auth();
   const provider = new firebase.auth.GoogleAuthProvider();
 
   export { auth, db , provider };

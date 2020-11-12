@@ -1,0 +1,8 @@
+Setup React context api
+set user 
+shift chat body to chat.js
+scroll
+edit timestamp
+change chat bubbles according to user 
+set avatar
+

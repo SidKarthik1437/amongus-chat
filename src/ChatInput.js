@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import firebase from 'firebase'
 import { db } from './firebase'
+import './ChatInput.css';
 import SendIcon from '@material-ui/icons/Send';
 
 function ChatInput() {
@@ -12,18 +13,19 @@ function ChatInput() {
   
       db
       .collection("messages")
-      .doc()
       .add({
+        user: 'reactninja',
         message: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
-      });
-  
+      })
+    
+
     setInput('')
   }
   return (
     <div className="text_box">
 
-      <form>
+      <form >
 
           <input
           
@@ -34,15 +36,15 @@ function ChatInput() {
               
           />
 
-          <button 
-              disabled = {!input} 
-              type = 'submit' 
-              onClick = {addMessage} 
-              variant="contained"
-          >
-            <h2 className="sendbutton"><SendIcon /></h2>
-          </button>
-
+            <button 
+                disabled = {!input} 
+                type = 'submit' 
+                onClick = {addMessage} 
+                variant="contained"
+            >
+              <h2 className="sendbutton"><SendIcon style={{color:'blue'}} /></h2>
+            </button>
+         
       </form>
              
                 

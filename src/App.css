@@ -12,8 +12,10 @@ body
 
 .chatbody
 {
-  width:50%;
+  width:800px;
   height: 500px;
+  
+
   margin-top: 50px !important;
   margin: auto;
   background-color: #5b6467;
@@ -22,7 +24,6 @@ body
 
   border-radius:25px;
   display: flex;
-  
 
 }
 .innerborder
@@ -55,7 +56,8 @@ padding: 0 15px 0 15px;
 }
 .roundbuttonshd
 {
- 
+  -webkit-filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+  filter: drop-shadow(5px 5px 5px rgb(235, 232, 232));
 }
 .textbox
 {

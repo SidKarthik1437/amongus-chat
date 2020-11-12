@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import { auth, db } from './firebase';
@@ -14,9 +15,9 @@ function App() {
           <Route path='/'>
           <div className="chatbody">
             <div className="innerborder">
-              <Message />  
+  
               <div className="textbox">
-                
+                <Chat />
               </div>
             </div>
             <div className="roundbutton"> 
