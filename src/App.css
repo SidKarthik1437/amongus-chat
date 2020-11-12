@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+
+*{
+
+  margin: 0;
+  padding: 0;
+}
+body
+{
+
+  background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.chatbody
+{
+  width:50%;
+  height: 500px;
+  margin-top: 50px !important;
+  margin: auto;
+  background-color: #5b6467;
+  background-image: linear-gradient(315deg, #80898b 0%, #8b939a 74%);
+  border: 15px solid linear-gradient(315deg, #5b6467 0%, #8b939a 74%) ;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border-radius:25px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  
 
-.App-link {
-  color: #61dafb;
 }
+.innerborder
+{
+  width:95%;
+  height: 90%;
+  
+  margin: auto;
+  margin-top: 18px;
+  margin-left: 15px;
+  border: 10px solid rgb(107, 107, 116);
+  border-radius: 10px;
+  background-color: lightgray;
+}
+.roundbutton
+{
+  
+  margin-top: 30%;
+  left: 0;
+  border-radius: 50px;
+}
+.buttondesign
+{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color:white;
+  display:inline-block;
+padding: 0 15px 0 15px;
+
+  
+}
+.roundbuttonshd
+{
+ 
+}
+.textbox
+{
+  position:absolute;
+  top:100px;
 }

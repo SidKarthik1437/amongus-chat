@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import { auth, db } from './firebase';
+import Message from './Message';
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
+import Chat from './Chat'
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+        <Router>
+          <Route path='/'>
+          <div className="chatbody">
+            <div className="innerborder">
+              <Message />  
+              <div className="textbox">
+                
+              </div>
+            </div>
+            <div className="roundbutton"> 
+              <div className="buttondesign"><RadioButtonCheckedIcon className="roundbuttonshd" /></div>
+            </div>
+          </div>
+          </Route>
+      </Router>
     </div>
+    
   );
 }
 
