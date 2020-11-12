@@ -20,7 +20,6 @@ function ChatInput() {
   
     setInput('')
   }
-
   return (
     <div className="text_box">
 
