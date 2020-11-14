@@ -3,10 +3,12 @@ import firebase from 'firebase'
 import { db } from './firebase'
 import './ChatInput.css';
 import SendIcon from '@material-ui/icons/Send';
+import { useStateValue } from './StateProvider';
 
 function ChatInput() {
 
   const [input, setInput] = useState('');
+  const [{user}] = useStateValue();
 
   const addMessage = (event) =>{
     event.preventDefault();
@@ -14,7 +16,7 @@ function ChatInput() {
       db
       .collection("messages")
       .add({
-        user: 'reactninja',
+        user: user.displayName,
         message: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       })

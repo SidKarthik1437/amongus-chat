@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Message from './Message'
 import { db } from './firebase'
 import ChatInput from './ChatInput'
+import { useStateValue } from './StateProvider';
 
 function Chat() {
 
     const [messages, setMessages] = useState([]);
+    const [{ user }] = useStateValue();
 
 
     useEffect(() => {
-        let user = 'reactninja'
         if(user)
         {
             db

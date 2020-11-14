@@ -1,30 +1,42 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
-import { auth, db } from './firebase';
-import Message from './Message';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import Chat from './Chat'
+import Login from './Login'
+import { useStateValue } from './StateProvider';
 
 function App() {
 
+  const [{user}, dispatch] = useStateValue();
 
   return (
     <div className="app">
-        <Router>
-          <Route path='/'>
-          <div className="chatbody">
-            <div className="innerborder">
-  
-              <div className="textbox">
-                <Chat />
+         <Router>
+           { !user? (
+           <>
+           <Login />
+           </>
+         ) : (
+           <>
+         
+            <Route path='/'>
+              <div className="chatbody">
+                <div className="innerborder">
+                  <div className="textbox">
+                    <Chat />
+                  </div>
+                </div>
+
+                <div className="roundbutton"> 
+                  <div className="buttondesign"><RadioButtonCheckedIcon className="roundbuttonshd" /></div>
+                </div>
+                
               </div>
-            </div>
-            <div className="roundbutton"> 
-              <div className="buttondesign"><RadioButtonCheckedIcon className="roundbuttonshd" /></div>
-            </div>
-          </div>
-          </Route>
+            </Route>
+        
+        </>
+      )}
       </Router>
     </div>
     
